@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atualizar Pessoas</title>
+    <link rel="stylesheet" href="_css/form.css">
+    <script src="_js/jquery.js"></script>
+    <script src="_js/maskinput.js"></script>
+    <script src="_js/script.js"></script>
+</head>
+
+<body>
+    <form action="index.php?class=PersonForm&method=save" class="form_capitalize" method="post"
+        enctype="multipart/form-data">
+
+        <label for="">Código</label>
+        <input type="number" name="id" value="{id}" readonly style="width: 30%">
+
+        <label for="">Nome</label>
+        <input type="text" name="name" value="{name}" required style="width: 50%">
+
+        <label for="">CEP</label>
+        <input type="text" name="cep" class="wc_getCep formCep" value="{cep}" required style="width: 50%">
+
+        <label for="">Endereço</label>
+        <input type="text" name="address" class="cep_address" value="{address}" required style="width: 50%">
+
+        <label for="">Bairro</label>
+        <input type="text" name="district" class="cep_district" value="{district}" required style="width: 50%">
+
+        <label for="">Telefone</label>
+        <input type="text" name="phone" class="formPhone" value="{phone}" required style="width: 50%">
+
+        <label for="email">E-mail</label>
+        <input type="email" name="mail" value="{mail}" required style="width: 50%">
+
+        <label for="city">Cidade</label>
+        <input type="text" name='city' class="cep_city" value="{city}" required style='width: 50%'>
+
+        <label for="state">UF</label>
+        <input type="text" name='state' class="cep_uf" value="{state}" required style='width: 50%'>
+
+        <label class="actions">
+            <a href="index.php?class=PersonList" class="btn btn-ligth-gray">
+                <img src='images/icons8-cancel-50.svg' style='width:25px'>
+                VOLTAR</a>
+
+            <button class='btn btn-ligth-gray' type='submit'>
+                <img src='images/icons8-settings-50.svg' style='width:25px'>
+                SALVAR
+            </button>
+        </label>
+    </form>
+</body>
+
+</html>
